@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 
 
-
 class CategoryItemList extends StatelessWidget {
 
   final String itemName;
   final String itemPrice;
   final String imagePath;
   final color;
+  void Function()? onPressed;
 
-  const CategoryItemList({
+  CategoryItemList({
     super.key,
     required this.itemName,
     required this.itemPrice,
     required this.imagePath,
-    required this.color
+    required this.color,
+    required this.onPressed
   });
 
   @override
@@ -53,7 +54,7 @@ class CategoryItemList extends StatelessWidget {
 
 
             MaterialButton(
-              onPressed: () {},
+              onPressed: onPressed,
               color: color[800],
               child: Text(
                 '\$' + itemPrice,
@@ -64,8 +65,6 @@ class CategoryItemList extends StatelessWidget {
                 ),
               ),
             )
-
-
           ],
         ),
       ),

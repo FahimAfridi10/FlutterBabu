@@ -12,13 +12,12 @@ class IntroPage extends StatelessWidget {
         children: [
 
             Padding(
-              padding: const EdgeInsets.all(36),
+              padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 48),
               child: Image.asset('lib/images/bike.png', height: 200),
-
             ),
 
           Padding(
-            padding: const EdgeInsets.all(36),
+            padding: const EdgeInsets.all(24),
             child: Text(
               "Yamaha YZF-R15 is a single-cylinder sport bike",
               textAlign: TextAlign.center,

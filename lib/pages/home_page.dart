@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../components/category_item_list.dart';
 import '../model/list_model.dart';
+import 'cart_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,6 +11,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () =>
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) {
+                      return const CartPage();
+                    }
+                )
+            ),
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.electric_bike),
+      ),
+
+
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,6 +88,7 @@ class HomePage extends StatelessWidget {
                         itemPrice: value.shopItems[index][1],
                         imagePath: value.shopItems[index][2],
                         color: value.shopItems[index][3],
+                        onPressed: () {},
                       );
                     },
 

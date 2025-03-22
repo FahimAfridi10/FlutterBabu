@@ -10,6 +10,8 @@ class CartModel extends ChangeNotifier{
     ["MiniBus", "70,000", "lib/images/minibus.png", Colors.cyan],
   ];
 
+
+
   get shopItems => _shopItems;
 
 }
