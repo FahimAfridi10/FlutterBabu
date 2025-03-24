@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class CategoryItemList extends StatelessWidget {
 
   final String itemName;
@@ -40,7 +39,7 @@ class CategoryItemList extends StatelessWidget {
 
             Image.asset(
               imagePath,
-              height: 64,
+              height: 72,
             ),
 
 
@@ -57,11 +56,11 @@ class CategoryItemList extends StatelessWidget {
               onPressed: onPressed,
               color: color[800],
               child: Text(
-                '\$' + itemPrice,
+                '৳$itemPrice',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 20
+                  fontSize: 15
                 ),
               ),
             )
