@@ -9,7 +9,7 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.grey[800],
+        color: Colors.grey[700],
         child: Column(
           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

@@ -11,32 +11,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) {
-                      return const CartPage();
-                    }
-                )
+        onPressed:
+          () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const CartPage();
+              },
             ),
+          ),
         backgroundColor: Colors.black,
         child: const Icon(Icons.electric_bike, color: Colors.white),
       ),
-
 
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
             const SizedBox(height: 48),
 
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.0),
-              child: Text('Dear Customer', style: TextStyle(fontSize: 15),),
+              child: Text('Dear Customer', style: TextStyle(fontSize: 15)),
             ),
 
             const SizedBox(height: 10),
@@ -77,7 +74,6 @@ class HomePage extends StatelessWidget {
               child: Consumer<CartModel>(
                 builder: (context, value, child) {
                   return GridView.builder(
-
                     itemCount: value.shopItems.length,
                     padding: const EdgeInsets.all(24),
                     gridDelegate:
@@ -92,16 +88,17 @@ class HomePage extends StatelessWidget {
                         imagePath: value.shopItems[index][2],
                         color: value.shopItems[index][3],
                         onPressed: () {
-                          Provider.of<CartModel>(context, listen: false).addItemToCart(index);
+                          Provider.of<CartModel>(
+                            context,
+                            listen: false,
+                          ).addItemToCart(index);
                         },
                       );
                     },
-
                   );
                 },
               ),
             ),
-
           ],
         ),
       ),

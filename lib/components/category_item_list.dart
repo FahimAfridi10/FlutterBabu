@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CategoryItemList extends StatelessWidget {
 
-  final String itemName;
+  final String  itemName;
   final String itemPrice;
   final String imagePath;
   final color;
